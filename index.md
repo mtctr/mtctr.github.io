@@ -1,7 +1,6 @@
 
 ---
-title: Processamento Digital de Imagens - DCA0445
-layout: default
+
 ---
 
 # {{ page.title }}
@@ -80,8 +79,5 @@ return 0;
 ```
 
 #### Resultado:
-![original][saladca]
-![alterada][saladca-mod]
-
-[saladca]: https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/saladca.png "Original"
-[saladca-mod]: https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/pdi-regions1.png "Alterada"
+![original](https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/saladca.png "Original")
+![alterada](https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/pdi-regions1.png "Alterada")
