@@ -120,6 +120,7 @@ int main(int, char**){
 }
 
 ```
-#### Imagem Original| Resultado:
-![alterada1](assets/img/pdi-trocaregioes.png)| [alterada2](assets/img/IMG_0904edit.jpg) 
+#### Imagem Original:
+![alterada2](assets/img/IMG_0904edit.jpg)
 #### Resultado:
+![alterada1](assets/img/pdi-trocaregioes.png)
