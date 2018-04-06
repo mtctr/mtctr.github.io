@@ -79,5 +79,5 @@ return 0;
 ```
 
 #### Resultado:
-![original](https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/saladca.png "Original")
-![alterada](https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/pdi-regions1.png "Alterada")
+![original](assets/img/saladca.png "Original")
+![alterada](assets/img/pdi-regions1.png "Alterada")
