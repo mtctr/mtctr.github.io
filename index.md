@@ -79,4 +79,9 @@ return 0;
 }
 ```
 
-####Resultado:
+#### Resultado:
+![original][saladca]
+![alterada][saladca-mod]
+
+[saladca]: https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/saladca.png "Original"
+[saladca-mod]: https://github.com/mtctr/mtctr.github.io/blob/master/assets/img/pdi-regions1.png "Alterada"
