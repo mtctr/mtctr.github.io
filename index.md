@@ -78,3 +78,5 @@ waitKey();
 return 0;
 }
 ```
+
+####Resultado:
