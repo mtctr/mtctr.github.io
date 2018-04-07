@@ -284,7 +284,7 @@ int main(int argc, char** argv){
 
 ## 5. Filtragem no domínio espacial I
 
-## Filtro laplaciano do gaussiano
+### Filtro laplaciano do gaussiano
 
 Neste exercício, foi proposto adicionar uma nova função ao exemplo fornecido no material, que é utilizar o filtro laplaciano do gaussiano. No programa original, utiliza-se a câmera do computador, mas como uso um desktop e não tenho câmera nele, fiz algumas modificações para que o mesmo fucionasse utilizando uma imagem estática.
 
