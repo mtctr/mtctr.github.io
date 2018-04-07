@@ -238,7 +238,9 @@ int main(int argc, char** argv){
 ## 6. Filtragem no domínio espacial II
 
 ### Exercício 1 - tiltshift
+Este programa reproduz o efeito "tiltshift" em uma imagem.
 
+Uma máscara de borramento é aplicada em uma cópia da imagem original e o usuário do programa escolhe onde as seções borradas serão exibidas.
 
 #### Código
 
