@@ -3,8 +3,19 @@
 You can use HTML elements in Markdown, such as the comment element, and they won't be affected by a markdown parser. However, if you create an HTML element in your markdown file, you cannot use markdown syntax within that element's contents.
 -->
 
-## 2. Manipulação de pixels - Exercícios
-### Exercício 1  
+# Índice
+1. [Manipulação de pixels](#pixels)
+    1. [Exercício 1](#pixels-ex1)
+    2. [Exercício 2](#pixels-ex2)
+2. [Preenchimento de Regiões](#regioes)
+3. [Manipulação de Histogramas](#histogramas)
+    1. [Exercício 1](#histogramas-ex1)
+
+
+<a name="histogramas-ex1"></a>
+
+## Manipulação de pixels <a name="pixels"></a>
+### Exercício 1  <a name="pixels-ex1"></a>
 
 Este programa, a partir de dois pontos P1(x,y) e P2(x,y) escolhidos pelo usuário, inverte as cores dos pixels localizados na região entre esses pontos.
 
@@ -80,7 +91,7 @@ return 0;
 ![alterada1](assets/img/pdi-regions1.png)
 
 
-### Exercício 2  
+### Exercício 2  <a name="pixels-ex1"></a>
 
 A função deste programa é trocar cada quadrante da imagem pelo seu oposto na diagonal.
 
@@ -131,7 +142,7 @@ int main(int, char**){
 #### Resultado:
 ![alterada2](assets/img/pdi-trocaregioes.png)
 
-## 3. Preenchimento de Regiões - Exercícios
+## Preenchimento de Regiões <a name="regioes"></a>
 
 No primeiro exercício pede-se encontrar uma forma de rotular os elementos caso existam mais de 255 na imagem. A maneira que utilizei foi dividir os objetos em dois tipos: com e sem buraco. Os objetos com buraco possuem uma cor mais escura que os sem buraco.
 
@@ -233,9 +244,9 @@ int main(int argc, char** argv){
 #### Resultado:
 ![alterada2](assets/img/pdi-labeling.png)
 
-## 4. Manipulação de Histogramas
+## Manipulação de Histogramas <a name="histogramas"></a>
 
-### Exercício 1 - Equalização de Histogramas
+### Exercício 1 <a name="histogramas-ex1"></a>
 
 No exercício, pede-se para realizar a equalização de histograma de uma imagem capturada pela câmera do computador, porém como uso um desktop e não tenho câmera nele, fiz a atividade usando uma imagem estática.
 
