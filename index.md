@@ -5,17 +5,19 @@ You can use HTML elements in Markdown, such as the comment element, and they won
 
 # Índice
 1. [Manipulação de pixels](#pixels)
-    1. [Exercício 1](#pixels-ex1)
-    2. [Exercício 2](#pixels-ex2)
+    1. [Exercício 1 - Inverter cores](#pixels-ex1)
+    2. [Exercício 2 - Troca de regiões](#pixels-ex2)
 2. [Preenchimento de Regiões](#regioes)
 3. [Manipulação de Histogramas](#histogramas)
-    1. [Exercício 1](#histogramas-ex1)
+    1. [Exercício 1 - Equalização de histograma](#histogramas-ex1)
+4. [Filtragem no domínio espacial](#espacial1)
+    1. [Exercício - Filtro laplaciano do gaussiano](#espacial-ex)
+5. [Filtragem no domínio espacial II](#espacial2)
+    1. [Exercício 1 - tiltshift](#espacial2-ex)
 
-
-<a name="histogramas-ex1"></a>
 
 ## Manipulação de pixels <a name="pixels"></a>
-### Exercício 1  <a name="pixels-ex1"></a>
+### Exercício 1 - Inverter cores  <a name="pixels-ex1"></a>
 
 Este programa, a partir de dois pontos P1(x,y) e P2(x,y) escolhidos pelo usuário, inverte as cores dos pixels localizados na região entre esses pontos.
 
@@ -91,7 +93,7 @@ return 0;
 ![alterada1](assets/img/pdi-regions1.png)
 
 
-### Exercício 2  <a name="pixels-ex1"></a>
+### Exercício 2 - Troca de regiões  <a name="pixels-ex2"></a>
 
 A função deste programa é trocar cada quadrante da imagem pelo seu oposto na diagonal.
 
@@ -246,7 +248,7 @@ int main(int argc, char** argv){
 
 ## Manipulação de Histogramas <a name="histogramas"></a>
 
-### Exercício 1 <a name="histogramas-ex1"></a>
+### Exercício 1 - Equalização de histograma <a name="histogramas-ex1"></a>
 
 No exercício, pede-se para realizar a equalização de histograma de uma imagem capturada pela câmera do computador, porém como uso um desktop e não tenho câmera nele, fiz a atividade usando uma imagem estática.
 
@@ -293,9 +295,9 @@ int main(int argc, char** argv){
 #### Resultado
 ![alterada3](assets/img/eq.jpg)
 
-## 5. Filtragem no domínio espacial I
+## Filtragem no domínio espacial I <a name="espacial1"></a>
 
-### Filtro laplaciano do gaussiano
+### Exercício - Filtro laplaciano do gaussiano <a name="espacial-ex"></a>
 
 Neste exercício, foi proposto adicionar uma nova função ao exemplo fornecido no material, que é utilizar o filtro laplaciano do gaussiano. No programa original, utiliza-se a câmera do computador, mas como uso um desktop e não tenho câmera nele, fiz algumas modificações para que o mesmo fucionasse utilizando uma imagem estática.
 
@@ -425,9 +427,9 @@ int main(int argvc, char** argv){
 #### Resultado
 ![resultado](assets/img/pdi-esp1.png)
 
-## 6. Filtragem no domínio espacial II
+## Filtragem no domínio espacial II <a name="espacial2"></a>
 
-### Exercício 1 - tiltshift
+### Exercício 1 - tiltshift <a name="espacial2-ex"></a>
 Este programa reproduz o efeito "tiltshift" em uma imagem.
 
 Uma máscara de borramento é aplicada em uma cópia da imagem original e o usuário do programa escolhe onde as seções borradas serão exibidas. Logo após a execução do programa, a nova imagem é salva em um arquivo.
