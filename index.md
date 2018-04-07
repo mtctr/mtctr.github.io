@@ -411,6 +411,8 @@ int main(int argvc, char** argv){
 }
 
 ```
+#### Resultado
+![resultado](assets/img/pdi-esp1.png)
 
 ## 6. Filtragem no domínio espacial II
 
