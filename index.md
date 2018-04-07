@@ -281,6 +281,137 @@ int main(int argc, char** argv){
 ![original3](assets/img/gabi.jpg)
 #### Resultado
 ![alterada3](assets/img/eq.jpg)
+
+## 5. Filtragem no domínio espacial I
+
+## Filtro laplaciano do gaussiano
+
+Neste exercício, foi proposto adicionar uma nova função ao exemplo fornecido no material, que é utilizar o filtro laplaciano do gaussiano. No programa original, utiliza-se a câmera do computador, mas como uso um desktop e não tenho câmera nele, fiz algumas modificações para que o mesmo fucionasse utilizando uma imagem estática.
+
+
+```cpp
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace cv;
+using namespace std;
+
+float media[] = {1,1,1,
+                 1,1,1,
+                 1,1,1};
+float gauss[] = {1,2,1,
+                 2,4,2,
+                 1,2,1};
+float horizontal[]={-1,0,1,
+                    -2,0,2,
+                    -1,0,1};
+float vertical[]={-1,-2,-1,
+                  0,0,0,
+                  1,2,1};
+float laplacian[]={0,-1,0,
+                  -1,4,-1,
+                   0,-1,0};
+float LoG[] = {1,2,1,
+               2,-16,2,
+               1,2,1};
+
+int absolut;
+char key;
+Mat image, imagef, result;
+Mat mask(3,3,CV_32F), mask1;
+
+void printmask(Mat &m){
+  for(int i=0; i<m.size().height; i++){
+    for(int j=0; j<m.size().width; j++){
+      cout << m.at<float>(i,j) << ",";
+    }
+    cout << endl;
+  }
+}
+
+void menu(){
+  cout << "\npressione a tecla para ativar o filtro: \n"
+	"a - calcular modulo\n"
+  "m - media\n"
+  "g - gauss\n"
+  "v - vertical\n"
+	"h - horizontal\n"
+  "l - laplaciano\n"
+  "p - laplaciano do gaussiano\n"
+	"esc - sair\n";
+  cin>>key;
+  switch(key){
+    case 'a':
+      absolut=!absolut;
+      break;
+    case 'm':
+      mask = Mat(3, 3, CV_32F, media);
+      scaleAdd(mask, 1/9.0, Mat::zeros(3,3,CV_32F), mask1);
+      mask = mask1;
+      printmask(mask);
+      break;
+    case 'g':
+      mask = Mat(3, 3, CV_32F, gauss);
+      scaleAdd(mask, 1/16.0, Mat::zeros(3,3,CV_32F), mask1);
+      mask = mask1;
+      printmask(mask);
+      break;
+    case 'h':
+      mask = Mat(3, 3, CV_32F, horizontal);
+      printmask(mask);
+      break;
+    case 'v':
+      mask = Mat(3, 3, CV_32F, vertical);
+      printmask(mask);
+      break;
+    case 'l':
+      mask = Mat(3, 3, CV_32F, laplacian);
+      printmask(mask);
+      break;
+    case 'p':
+      mask = Mat(3, 3, CV_32F, LoG);
+      printmask(mask);
+      break;
+    default:
+    break;
+  }
+}
+
+int main(int argvc, char** argv){
+
+  double width, height;
+
+  image = imread("img/gabi.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+  image.copyTo(imagef);
+  width=image.cols;
+  height=image.rows;
+  std::cout << "largura=" << width << "\n";;
+  std::cout << "altura =" << height<< "\n";;
+
+  namedWindow("filtroespacial",1);
+
+  mask = Mat(3, 3, CV_32F, media);
+  scaleAdd(mask, 1/9.0, Mat::zeros(3,3,CV_32F), mask1);
+  swap(mask, mask1);
+  absolut=0; // calcs abs of the image
+
+  menu();
+
+  imshow("original", image);
+  filter2D(image, imagef, image.depth(), mask, Point(1,1), 0);
+  if(absolut){
+    imagef=abs(imagef);
+  }
+  imagef.convertTo(result, CV_8U);
+  imshow("filtroespacial", result);  
+  key = (char) waitKey(10);
+
+  waitKey(0);
+  return 0;
+}
+
+```
+
 ## 6. Filtragem no domínio espacial II
 
 ### Exercício 1 - tiltshift
