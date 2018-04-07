@@ -278,7 +278,7 @@ int main(int argc, char** argv){
 }
 ```
 #### Imagem original
-![original3](assets/img/gabi.jpg)
+![original3](assets/img/gabipb.jpg)
 #### Resultado
 ![alterada3](assets/img/eq.jpg)
 
