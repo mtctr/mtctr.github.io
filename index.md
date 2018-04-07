@@ -240,7 +240,8 @@ int main(int argc, char** argv){
 ### Exercício 1 - tiltshift
 Este programa reproduz o efeito "tiltshift" em uma imagem.
 
-Uma máscara de borramento é aplicada em uma cópia da imagem original e o usuário do programa escolhe onde as seções borradas serão exibidas.
+Uma máscara de borramento é aplicada em uma cópia da imagem original e o usuário do programa escolhe onde as seções borradas serão exibidas. Logo após a execução do programa, a nova imagem é salva em um arquivo.
+
 
 #### Código
 
@@ -277,6 +278,7 @@ void on_trackbar_blend(int,void*){
     addWeighted( image1.row(i), alfa, image2.row(i), 1-alfa, 0.0, blended.row(i));
  }
  imshow("tiltshift", blended);
+ imwrite("filtrada.jpg", blended);
 }
 
 
