@@ -13,7 +13,7 @@ You can use HTML elements in Markdown, such as the comment element, and they won
 4. [Filtragem no domínio espacial](#espacial1)
     1. [Exercício - Filtro laplaciano do gaussiano](#espacial-ex)
 5. [Filtragem no domínio espacial II](#espacial2)
-    1. [Exercício 1 - tiltshift](#espacial2-ex)
+    1. [Exercício 1 - Tiltshift](#espacial2-ex)
 
 
 ## Manipulação de pixels <a name="pixels"></a>
@@ -429,7 +429,7 @@ int main(int argvc, char** argv){
 
 ## Filtragem no domínio espacial II <a name="espacial2"></a>
 
-### Exercício 1 - tiltshift <a name="espacial2-ex"></a>
+### Exercício 1 - Tiltshift <a name="espacial2-ex"></a>
 Este programa reproduz o efeito "tiltshift" em uma imagem.
 
 Uma máscara de borramento é aplicada em uma cópia da imagem original e o usuário do programa escolhe onde as seções borradas serão exibidas. Logo após a execução do programa, a nova imagem é salva em um arquivo.
