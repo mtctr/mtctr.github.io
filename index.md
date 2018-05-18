@@ -14,6 +14,10 @@ You can use HTML elements in Markdown, such as the comment element, and they won
     1. [Exercício - Filtro laplaciano do gaussiano](#espacial-ex)
 5. [Filtragem no domínio espacial II](#espacial2)
     1. [Exercício 1 - Tiltshift](#espacial2-ex)
+6. []
+7. []
+8. [Quantização com K-Means](#kmeans)
+		1. [Exercício](#kmeans-ex)
 
 
 ## Manipulação de pixels <a name="pixels"></a>
@@ -522,3 +526,7 @@ int main(int argvc, char** argv){
 ```
 #### Resultado
 ![tiltshift](assets/img/pdi-tiltshift.png)
+
+## Quantização com K-Means <a name="kmeans"></a>
+
+### Exercício <a name="kmeans-ex"></a>
