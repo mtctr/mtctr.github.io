@@ -19,7 +19,7 @@ You can use HTML elements in Markdown, such as the comment element, and they won
 7. [Algoritmo de Canny](#canny)
     1. [Exercício - Pontilhismo](#canny-ex)
 8. [Quantização com K-Means](#kmeans)
-		1. [Exercício](#kmeans-ex)
+    1. [Exercício](#kmeans-ex)
 
 
 ## Manipulação de pixels <a name="pixels"></a>
