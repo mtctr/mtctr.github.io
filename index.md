@@ -533,9 +533,9 @@ int main(int argvc, char** argv){
 
 ### Exercício - Filtro Homomórfico <a name="dft-ex"></a>
 
-## DFT <a name="canny"></a>
+## Algoritmo de Canny <a name="canny"></a>
 
-### Exercício - Filtro Homomórfico <a name="canny-ex"></a>
+### Exercício - Pontilhismo <a name="canny-ex"></a>
 
 ## Quantização com K-Means <a name="kmeans"></a>
 
