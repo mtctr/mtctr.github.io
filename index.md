@@ -771,7 +771,7 @@ int main(int argc , char** argv){
 
 ```
 #### Resultado:
-![homomorfico](assets/img/homomorfico)
+![homomorfico](assets/img/homomorfico.png)
 
 ## Algoritmo de Canny <a name="canny"></a>
 
