@@ -14,8 +14,10 @@ You can use HTML elements in Markdown, such as the comment element, and they won
     1. [Exercício - Filtro laplaciano do gaussiano](#espacial-ex)
 5. [Filtragem no domínio espacial II](#espacial2)
     1. [Exercício 1 - Tiltshift](#espacial2-ex)
-6. []
-7. []
+6. [DFT](#dft)
+    1. [Exercício - Filtro Homomórfico](#dft-ex)
+7. [Algoritmo de Canny](#canny)
+    1. [Exercício - Pontilhismo](#canny-ex)
 8. [Quantização com K-Means](#kmeans)
 		1. [Exercício](#kmeans-ex)
 
@@ -527,6 +529,67 @@ int main(int argvc, char** argv){
 #### Resultado
 ![tiltshift](assets/img/pdi-tiltshift.png)
 
+## DFT <a name="dft"></a>
+
+### Exercício - Filtro Homomórfico <a name="dft-ex"></a>
+
+## DFT <a name="canny"></a>
+
+### Exercício - Filtro Homomórfico <a name="canny-ex"></a>
+
 ## Quantização com K-Means <a name="kmeans"></a>
 
 ### Exercício <a name="kmeans-ex"></a>
+#### Código
+```cpp
+#include <opencv2/opencv.hpp>
+#include <cstdlib>
+
+using namespace cv;
+using namespace std;
+
+int main( int argc, char** argv ){
+  int nClusters = 6;
+  Mat rotulos;
+  int nRodadas = 1;
+  Mat centros;
+
+  Mat img = imread( "img/gabi.jpg", CV_LOAD_IMAGE_COLOR);
+  Mat samples(img.rows * img.cols, 3, CV_32F);
+  for( int y = 0; y < img.rows; y++ ){
+    for( int x = 0; x < img.cols; x++ ){
+      for( int z = 0; z < 3; z++){
+        samples.at<float>(y + x*img.rows, z) = img.at<Vec3b>(y,x)[z];
+	  }
+	 }
+  }
+  kmeans(samples,
+		 nClusters,
+		 rotulos,
+		 TermCriteria(CV_TERMCRIT_ITER|CV_TERMCRIT_EPS, 10000, 0.0001),
+		 nRodadas,
+		 KMEANS_RANDOM_CENTERS,
+		 centros );
+
+  Mat rotulada( img.size(), img.type() );
+  for( int y = 0; y < img.rows; y++ ){
+    for( int x = 0; x < img.cols; x++ ){
+	  int indice = rotulos.at<int>(y + x*img.rows,0);
+	  rotulada.at<Vec3b>(y,x)[0] = (uchar) centros.at<float>(indice, 0);
+	  rotulada.at<Vec3b>(y,x)[1] = (uchar) centros.at<float>(indice, 1);
+	  rotulada.at<Vec3b>(y,x)[2] = (uchar) centros.at<float>(indice, 2);
+	 }
+  }
+  imshow( "clustered image", rotulada );
+  imwrite("img/clustered.jpg", rotulada);
+  waitKey( 0 );
+}
+
+```
+
+Não há muita diferença entre as imagens pois é realizada apenas 1 rodada. Porém, como os centros são iniciados de forma aleatória, podem convergir de forma diferente em cada execução.
+
+#### Original:
+![original4](assets/img/gabi.jpg)
+#### Alteradas:
+![kmeans](assets/img/kmeans.gif)
